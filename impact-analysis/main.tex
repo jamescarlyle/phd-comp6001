@@ -2,6 +2,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{csquotes}
+\usepackage{url}
+\usepackage[a4, portrait, left=2.4cm,right=2.4cm,top=2cm,bottom=2.2cm]{geometry}
 \pagenumbering{arabic}
 \pagestyle{headings} 
 \begin{document}
@@ -17,136 +19,39 @@
     \keywords{tribology \and bearing \and machine learning \and sensor \and maintenance.}
 \end{abstract}
 
-\section{Introduction}
-Preventative maintainance is key to ensure the ongoing integrity of critical-safety mechanical parts such as bearings. Bearings are subject to various wear mechanisms, including micro-pitting, and in time the lubricants which protect them gradually break down. Eventually this causes the bearing surfaces to abrade, accelerating wear in a vicious spiral, which can lead to catastrophic failure. Unnecessary preventative replacement is conservative, expensive, and damages the environment. Additionally, new plant-derived lubricants are proposed, but lack of trust in their performance will limit adoption. 
-
-Currently positioned at Technology Readiness Level (TRL) 6, the project focuses on earlier detection of mechanical wear to enable predictive maintenance and more efficient operation. The proof of concept (PoC) will demonstrate the co-design of machine-learning driven advanced sensors that integrate into machinery. 
-
-Key benefits of providing better current-state and remaining-life prediction are reduced disruption, financial and environmental cost. Because many hard-to-monitor bearings are found in sustainable technologies such as offshore wind and wave power, and lower operational costs increases adoption, this research can also indirectly support decarbonisation around the world. Two additional benefits are anticipated: self-powered sensors can be used where external power supplies are not allowed in highly-regulated industries, and sensors can also detect external environmental issues (e.g.\ bearing sensors can detect rail track failure).
-
-The project is positioned to support renewable energy innovation, decarbonisation goals, and broader applications across sectors, including travel, manufacturing and logistics. The TriboAI project demonstrates benefit without contradiction of the UN's Sustainable Development Goals (SDG).
-
-Notes have been derived from an interview with Professor Nick Harris (founding team) and papers and submissions supplied by him. This report is loosely based on the AREA 4P Framework, which combines four dimensions (Process, Product, Purpose, People) with four stages (Anticipate, Reflect, Engage, Act). The goal is to ensure that all responsible innovation aspects are addressed.
-
-\section{Process, or how the project is being run}
-    The project aims to improve take academic research into bearing sensors, combine it with machine learning (ML), and commercialise the technology through a university spin-out called \enquote{TriboAI} (aside: the study of bearings is called Tribology). Its timeline defines its first product, route to market, and sales timeline, with a goal to transition to a spinout within two years of the conclusion of the PoC. The project offers possible socio-economic benefits such as reduced operating costs, extended asset life, lower emissions and fuel use, better asset availability, and support for industry transition to net-zero and decarbonisation.
+\section{Context}
+    Preventative maintenance is key to ensure the ongoing integrity of critical-safety mechanical parts such as bearings. Bearings are subject to various wear mechanisms, and in time their lubricants gradually break down. Eventually this causes the bearing surfaces to rub, accelerating wear and leading to catastrophic failure. However, preventative early replacement is conservative, expensive, and damages the environment. 
     
-    The project has an experienced advisory board. The board consists of a data scientist, an industry adviser and a bearing expert. Given this expertise, it's expected that the board would focus primarily on technical matters and direction, rather than commercial, leadership or team issues.
-
-    In terms of technology development, the project promotes non-destructive sensing methods that are well established. The international standards which map closest to the project are the ISO standards for machinery vibration, such as ISO 10816 and its current replacement ISO/DIS 20816-3 \cite{for_2025}. The research methodology should incorporate laboratory testing, with controlled experiments to validate sensor accuracy and algorithm performance across bearing types and operating conditions. This should be followed by field trials, real-world deployment on operating machinery to assess performance under variable environmental conditions. Data management should be established to ensure compliance with GDPR and industry data protection requirements, including secure handling of operational data.
-
-\subsection{Risks, how they are recognised and mitigated}
-    The project faces technological risks (e.g.\ vibrations detected by sensors cannot be correlated to the level of wear and bearing life remaining). 
+    Separately, new plant-derived 'green' lubricants are proposed, but lack of trust in their performance will limit adoption. 
     
-    There are governance risks in the way that the research and spinout activity is conducted. 
+    The aim of this project is to develop academic research of in-bearing sensors, combine it with machine learning (ML), and commercialise it through a university spin-out called \enquote{TriboAI}. The project has published a timeline which defines its Proof of Concept (PoC), route to market, and sales timeline, with the goal to transition to TriboAI within two years of the conclusion of the PoC. 
     
-    There are commercial risks, e.g.\ that funding for product development cannot be found, or that the cost of product development and manufacture is so high that it's cheaper to replace bearings early and discard usable items. 
+    This report is loosely based on the AREA 4P Framework, which combines four dimensions (Purpose, Product, People, Process) with four stages (Anticipate, Reflect, Engage, Act). The goal is to ensure that all responsible innovation aspects are addressed.
+\section{Beneficial Impacts}
+    The key benefits of providing better current-state and remaining-life prediction are reduced disruption, and lower financial and environmental cost. Because many sustainable technologies such as offshore wind and wave power use hard-to-monitor bearings, and because lower operational costs increase adoption, this research can also indirectly support decarbonisation around the world. Two additional benefits are anticipated; self-powered sensors can be used where external power supplies are not allowed in highly-regulated industries, and sensors can also detect external environmental issues (e.g.\ bearing sensors can detect rail track failure).
     
-    There are reputational risks, e.g.\ that the bearing analysis works in a laboratory environment but fails in operational use, causing inconvenience or death to end-users and negative public perception. These reputational risks could impact machine operating organisations, the spinout, and the university itself. 
-
-    \begin{table}[ht]
-    \centering
-    \tiny
-    \begin{tabular}{|p{0.23\linewidth}|p{0.23\linewidth}|p{0.4\linewidth}|p{0.1\linewidth}|}
-    \hline
-    \textbf{Risk} & \textbf{Effect} & \textbf{Mitigation} & \textbf{Concern} \\
-    \hline
-    Failure to integrate sensor/software into partners' systems &
-    Lack of evidence for MVP development and validation &
-    3 partners, increasing the likelihood of successful integration with at least one, but also explore other systems with new partners. &
-    Moderate \\
-    \hline
-    Lack of engagement from prospective customers or markets &
-    Validation issues of commercial use cases or attracting investment &
-    Ongoing customer discovery by ICURe Exploit and Future Worlds and development of the online presence. Contacts with partners nCATS (100+) will be made and over 50 during ICURe Explore. &
-    Moderate \\
-    \hline
-    Business opportunity remains at the test level &
-    Difficulty in expanding the business and scale up &
-    Identified a beachhead market but can move to tribology services and provide connections to larger industry players. &
-    Moderate \\
-    \hline
-
-    \end{tabular}
-    \caption{Key project risks, effects, mitigations and concern levels.}
-    \end{table}
-    
-    Wider risks include technology lock-in (dependence on proprietary monitoring systems may create vendor lock-in for operators), measurement risks (e.g.\ sensor calibration drift, environmental interference, and data transmission failures could lead to unreliable predictions), and cybersecurity risks (since connected monitoring systems can introduce new vulnerabilities to industrial sectors targeted by cyber threats).
-        
-    Risks can be monitored by assessment, through the establishment of a risk management process. This ensures that risks are logged in a register and periodically and methodically reassessed. All high-likelihood or high-severity risks should be raised to the advisory board. This is a standard commercial project management process, often part of RAIDs analysis (tracking of risks, assumptions, issues and dependencies). Further formalisation could be effected through the establishment of a risk committee within the spinout, and communication of top risks to the university risk process. Risks are in part mitigated by the tremendous experience of the team behind the research and spinout, but there is no specific risk analysis in the project documentation seen.
-        
-\subsection{Assumptions}
-    The key assumptions that the project brings are that preventative maintainance is, overall, much less costly and disruptive than either early precautionary replacement of parts, or failure followed by late reactive replacement, and that there is a sustainability imperative to reduce waste created by premature replacement.
-
-\subsection{The process of reflection and introspection}
-    Reflection is crucial to ensure that blind spots and weaknesses are recognised, so that they may be ameliorated. It's common for spinouts and startups to focus hard on what their participants are most excited about, missing the bigger picture of implications and wider environmental issues with ultimately cause them to fail. The project team understands the context in which it operates; through an extensive network of technologists and potential customers, it understands the status quo, the potential to improve bearing monitoring, and the economic benefits of doing so. TODO Reflection is not being monitored as an activity per se, but the founding team has the experience to know that reflection (whether formalised, externalised or internalised) is important. 
-    
-    Each member of the project team has extensive delivery experience. For example, the CEO has 30 years experience on developing sensors based on electrostatics, the sensor technology to be adopted, and has been awarded medals in the tribology domain, as well as funding to create the UK national centre for tribology (bearings). Other members of the founding team have 25+ years experience in tribology, but perhaps more importantly, have experience spinning out cutting-edge technology into startups such as Perpetuum, which grew to 75 people and was sold to Hitachi. The team has published 800 papers collectively, and have a track record of organising conferences and symposia, chairing industry bodies, and outreach and teaching activities.
-
-    Additionally, it's important that the advisory board holds a mirror up to the founding team, and challenges team members to continually assess progress, whether original objectives remain valid or should be changed, whether funding remains sufficient, and whether commercialisation (the ground truth for a spinout) is on track. As the spinout progresses, and a commercial transition begins, it may be beneficial to add non-executive directors with legal, marketing, or finance experience. 
-    TODO how often?
-
-    The project should ensure that management time is set aside to reflect as a group, for example, on a monthly or annual basis.        
-        
-\subsection{Engagement}
-    The team's objective is to engage with machine manufacturers, parts suppliers, research institutions and users to shape the design and operational use of the sensing system. Feedback is seen as critical for impact and market entry. It reflects the team's experience in working inclusively with industrial partners and researchers, translating customer problems into solutions. Stakeholders already have substantial involvement in the project. One of the strongest indicators of this is the extent to which external organisations have provided written support for the project PoC in funding applications, such as Catapult (the national renewable energy centre), Cummins (a renowned diesel engine manufacture), Schaeffler (a car parts supplier with 80,000 employees), and City University. These industry and academic partners will provide feedback to understand the impact that the technology can have on the operation of machinery and the commercial opportunity which exists.
-    
-    The project is led by Professor Robert Wood and a founding team including Professor Nick Harris, all from the University of Southampton. Support is also resourced from the university, both in terms of tribological laboratory facilities as well as business support. The technology transfer officer is Graham Cradock, who has been supporting spinouts from the university for 3 years and has many prior years of CEO experience at startups.
-
-\subsection{Conduct}
-    The founding team commits to ethical conduct, open and trusted research, and to working with colleagues without prejudice or bias using inclusive approaches to product design and activities. Team members are focused on effective commercialisation as well as research, so there is a commercial imperative for continued improvement, and the motivation of the team members is strongly aligned with this. As senior members of the university faculty, the founding team has an existing obligation to undertake research ethically and without bias.
-
-\section{Product}
-
-\subsection{Technology Readiness}
-    The project considers itself to be at Technology Readiness Level 6, \enquote{demonstrator} level. Several key hurdles exist: The industries targetted are, in many cases, highly regulated, and safety concerns take the highest priority, and for an associated move away from polluting oil-based lubricants to plant-based ones, there is a natural conservatism from generations of experience to overcome.
-
-\subsection{Data}
-    Data associated with the project will be handled under an overall Data Management Plan ensuring that all data are FAIR (Findable, Accessible, Interoperable, Reusable). Specifically for tribological data, the project will adopt commonly agreed standards for the generation of data and metadata \cite{garabedian_2022}. Data should be stored in open, non-proprietary formats (like CSV) so it can be easily found, reused, and combined with other data. All data management must follow GDPR and each company's own data standards. For commercial partners, the approach must be adapted so they can legally keep sensitive data private while still providing enough access to meet the project's requirements.
-    
-    Indirect data, such as the number of failed bearings or catastrophic failures, should also be recorded. This is important from a commercial and marketing perspective, as well as a technical one. The amount of time that machines spend "in maintainance" where bearings are being replaced should also be measured.
-
-\subsection{Potential of misuse, and consequences of failure}
-    The applications of the technology are extremely wide-ranging, and across most industries. Examples provided by the project include wind turbines, where inspection is highly involved, aircraft, gas turbines and all power generation plant. The project has quoted a global predictive maintenance market of \$60 billion by 2030, with tribometers (bearing sensors) alone providing a short term market of \$7 million by 2030. Obviously, bearings play a key role in military hardware, including ships, tanks and fighter jets, but the technology is not aimed at the military sector per se., and military misuse is a matter of perspective.
-    
-    If the project fails to deliver a working PoC (i.e.\ the bearings, their sensors, and the peripheral ML-based analysis tools), the negative consequences are minor and financial (to the extent that funding doesn't deliver a return) and possibly reputational (to the extent that e.g.\ exaggerated claims were not met). The negative consequences are much greater once the bearings are deployed into production. If the sensors produce a false positive, then machinery will be taken out of service and components replaced unnecessarily. If they produce a false negative, and don't detect an imminent failure, then life-threatening accidents might occur. 
-    
-    The act of all engineering is to balance risk, safety margins and cost; this technology allows operators to understand failure boundaries better, and to safely reduce margins and cost.
-    TODO Does the project have a risk register?
-
-\subsection{Knowledge sharing}
-    A key decision for the project will be the extent to which to share research results, data and learnings which might be transferable to other areas which the spinout is not targeting. The team has experience of publishing papers and software openly, for example in the form of software libraries on Github (e.g.\ github.com/jogrundy), as well as an extensive body of research literature. The team has already published less sensitive results, but recognises that the core innovation, electrostatic sensing for early stage wear detection, is a novel approach that can be protected through patents. Patent searchs have not identified prior art with this predictive ability. The team has presented to the university IP panel, and will seek to protect disclosure of the AM/ML algorithms used and the weights etc.\ evaluated. Following patent attorney advice, the team will decide on whether simply to retain trade secrets, or disclose through the protection of a patent application. Electrostatic sensors themselves are not novel; the team published a paper describing the application in bearing wear detection in 2021. Given this position, the team is limiting wider communication. Conference and journal publications are being held back, and partner discussions are held under NDA to limit disclosure. 
-
-    Other aspects of IP are also being developed, such as protection by copyright of the software solution and printed sensor design. The objective is to allow the university to license the IP portfolio to TriboAI Ltd., a newly-formed limited company, which will apply for trademark protection across related classes of goods and services. It is the intention that the IP will represent a significant asset for the company.
-
-    The spinout team will also maintain an IP register and follow a formal process of IP due diligence, looking at identification, ownership and barriers for IP components (some of which will be held by other parties).
-
-    This stance on IP protection through non-disclosure is standard within the commercial startup world. Patents and trade secrets can increase financial returns from research, encouraging firms to invest in new green and socially beneficial technologies, such as this. However, overly broad patents can block following research, and restrict the open exploration that RRI encourages. And if IP protection is sought solely to maximise profit, it will conflict with responsible goals of equitable access and long term societal benefit. The team should weigh the needs for protection against long-term sustainability, and consider a tiered licensing model (with robust protection) where certain social benefit sectors can gain access either freely or cheaply.
-
-\subsection{Product alternatives}
-    Alternative approaches of preventative failure detection exist, but they are disruptive (i.e.\ detection requires the machinery to be suspended from service), involved (i.e.\ they require disassembly for inspection) and potentially are destructive in nature (e.g.\ a sample of bearings are sliced open to inspect sliding surfaces). 
- 
-    The proposed product commercialisation approach has several failure possibilities, both at the research stage (e.g.\ it is simply not possible to detect wear preemptively and reliably, due to noise or sensor inadequacy), or at the deployment stage (e.g.\ the external funding environment is not conducive to raising the significant capital required to build smart bearing and monitoring products). Other unknowns include long-term sensor reliability in harsh operating environments, algorithm performance across diverse bearing types and operating conditions, and market acceptance and regulatory approval timelines.
-
-
+    Elsewhere, the project offers possible socio-economic benefits such as reduced operating costs, extended asset life, lower emissions and fuel use, and better asset availability. It offers broad applications across sectors, including travel, manufacturing and logistics, and addresses several of the UN's Sustainable Development Goals (SDG) without falling foul of others.
 \section{Purpose}
-\subsection{Anticipation - should this work be done at all?}
-    The work is significant in its potential to reduce the amount of waste associated with too-early, precautionary replacement of bearings before it is necessary. There is a critical gap in industrial machine maintenance, caused by a desire to reduce maintenance costs. For example, bearing failures in trains can result in catastrophic accidents, for example in Ohio, where a defective wheel bearing caused a derailment and fire of 38 freight trucks with hazardous materials \cite{wikipedia_2023}.  The startup's purpose aligns with societal needs for safer transportation, reduced environmental waste, and more efficient maintenance operations. Research indicates that predictive maintenance can deliver 18-25\% cost reductions vs.\ a standard approach, and up to 40\% savings over reactive approaches\cite{content_2025}. Additionally, more accurate monitoring of bearings will allow more to be remodelled - a refurbished bearing can reach 90\% of the lifespan of a new bearing with just 10\% of the energy and material costs, but only if it has been caught in time\cite{peverill_2021}.
+\subsection{Anticipation - whether this work should be done at all}
+    The work is significant in its potential to reduce the amount of waste associated with too-early, precautionary replacement of bearings. There are many examples where bearing maintenance is avoided in a desire to reduce maintenance costs. Bearing failures in trains can result in catastrophic accidents, and in one example in Ohio, a defective wheel bearing caused a derailment and fire of 38 freight trucks with hazardous materials \cite{wikipedia_2023}.  
     
-    The main benefit of the technology is that catastrophic failure can be avoided, while at the same time, over-eagar and unnecessary early replacement can be deferred. These are socio-economic benefits; beyond these, emissions and fuel consumption can be reduced, utilisation can be increased, and more broadly, aid industry to move towards net-zero and decarbonisation. 
+    The project's purpose aligns with societal needs for safer transportation, reduced environmental waste, and more efficient maintenance operations. Research indicates that predictive maintenance can deliver 18-25\% cost reductions vs.\ a standard approach, and up to 40\% savings over reactive approaches\cite{content_2025}. Additionally, more accurate monitoring will allow more bearings to be remodelled - a refurbished bearing can reach 90\% of the lifespan of a new bearing with just 10\% of the energy and material costs, but only if it has been caught in time\cite{peverill_2021}.
     
-    The immediate beneficiary of this technology is the operator of the machinery. Although the technology requires deployment of new bearings fitted with the necessary sensors, and new analysis technology to \enquote{listen} for early pertubations, the ongoing operational costs, via fewer replacements and fewer catastrophic failures, are lower. Ultimate users, such as train passengers, will also face fewer disruptions to the services they receive. The difference will be felt through a reduction in ongoing maintenance costs, for example, destructive testing, as well as an improvement in service outage caused by unplanned maintenance and disruption.
+    So the main benefit of the technology is that catastrophic failure can be avoided, while at the same time, over-eager and unnecessary early replacement can be deferred. These are socio-economic benefits, but additionally, emissions and fuel consumption can be reduced, utilisation can be increased, and more broadly, industry can be helped to move towards net-zero and decarbonisation. 
+\subsection{Beneficiaries}
+    The immediate beneficiaries of this technology are the machinery operators. Although the project requires deployment of new bearings fitted with the necessary sensors, and new analysis technology to \enquote{listen} for early perturbations, the ongoing operational costs are lower, via fewer replacements and fewer catastrophic failures. Ultimate users, such as train passengers, will also face fewer disruptions to the services they receive. The difference will be felt through a reduction in ongoing maintenance costs (e.g.\ destructive testing), as well as an decrease in unplanned outage and maintenance.
 
     Success can directly be measured by the increased utilisation of bearings (i.e.\ they are run until they are almost worn out, but not beyond), a reduction in the number of unnecessary maintenance windows, and a reduction in the number of catastrophic failures. Indirectly, success can be measured by service availability, reputation and end-user satisfaction.
-    
 \subsection{How sustainable is the product/outcome?}
-    From a sustainability perspective, the \emph{project research} is small-scale in nature, and involves evaluating the vibrations of bearings (their noise) as the bearing ages and wears out in small-scale tests. Considering train bearings alone, market research values the dedicated railway bearing market at roughly USD 1–3.5 billion in the mid-2020s, perhaps \~10 million bearings, compared to a few thousand used for testing during the project research. Perhaps 1 million of these are replaced and discarded unnecesarily each year. Although this assumes total market penetration, the other aspect is the broad field of industrial bearing deployment; including aircraft, ships, and most factory machinery. So the amount of material involved in the project is tiny compared to the long-term material reduction. The \emph{product} itself is net positively sustainable. Although manufacture cost of sensor-enabled bearings will be higher, the incremental unit cost will fall over time and quanity so that, if successful and any patent protection has ended, the technology will become commoditised. No significant material is used in manufacture of the sensors of bearings, and each bearing will be more efficiently utilised. 
+    The \emph{project research} just requires sustainable, small-scale tests using a few thousand bearings. In \emph{production}, considering train bearings alone, the market was valued at roughly USD 1–3.5 billion in the mid-2020s, perhaps \~10 million bearings. Perhaps 1 million of these are replaced and discarded unnecessarily each year, meaning that the material benefits vastly outweigh the costs. This comparison doesn't even account for the huge field of industrial bearing deployment; including aircraft, ships, and most factory machinery. 
     
-    The sensor material (for example, capacitively coupled electrodes) itself amounts to a few grams and is not significant from an environmental waste perspective. But still, the materials used for manufacture of sensors should be assessed for environmental impact - care should be taken that the recycling of steel remains feasible, as separation of materials during recycling may not be possble. During operation, the active lifespan of bearings should be logged and compared against a control statistic of bearings without sensors.
-    Overall, the system is focused on long-term benefits, because in the short term, the amortisation cost of bearing development, initial installation, and monitoring infrasture, as well as staff training, will be higher. But improvements should be visible from the moment the enhanced bearings are monitored.
-
+    The additional sensor material (for example, capacitively coupled electrodes) itself amounts to a few grams per bearing and is not significant from an environmental waste perspective. The \emph{product} overall is positively sustainable since each bearing will be more efficiently utilised. Although manufacture cost of sensor-enabled bearings will be higher, the incremental unit cost will fall over time and as quantities increase, so that the technology can become commoditised after any patent protection has ended. No significant material is used in manufacture of the sensors of bearings.
+    
+    Still, the materials used for manufacture of sensors should be assessed for environmental impact - care should be taken that the recycling of steel remains feasible, as separation of materials during recycling may not be possible. During operation, the active lifespan of bearings should be logged and compared against a control statistic of bearings without sensors.
+     
+    Overall, the system is focused on long-term benefits, because in the short term, the amortisation cost of bearing development, initial installation, and monitoring infrastructure, as well as staff training, will be higher. But improvements should be visible from the moment the enhanced bearings are monitored.
 \subsection{Sustainable Development Goals (SDG)}
-    The project can show compelling intersection with many SDGs, both through a reduction in bearing replacement, and an enabler to less-proven eco-friendly lubricants.
+    The project can show compelling intersection with many SDGs, both through a reduction in bearing replacement, and an enabler of less-proven eco-friendly lubricants.
     \begin{itemize}
         \item \emph{06 Clean water} - Discarded lubricants which enter groundwater can contaminate over a wide area. The project aims to reduce unnecessary lubricant consumption.
         \item \emph{07 Clean energy} and to a lesser extent \emph{13 climate action}- Bearings are a difficult-to-replace component of mechanical renewable energy systems, notably wind turbines, and better monitoring will lower their cost.
@@ -155,50 +60,166 @@ Notes have been derived from an interview with Professor Nick Harris (founding t
         \item \emph{14 Life below water} and \emph{15 life on land} - A move away from contaminated and highly-polluting oil-based lubricants can be enabled.
         \item \
     \end{itemize}
-
-\section{People}
-    Start by considering the outcome of the project, and who will be affected, for better or worse. If the research is successful, and the spinout achieves commercial traction and adoption, machine operators should see shorter and fewer machinery maintenance windows. Service end-users should see higher service availability and overall lower costs. The table provides an analysis of impacted groups:
-    \begin{table}[h!]
+\section{Product}
+\subsection{Product and PoC scope}
+The project has quoted a global predictive maintenance market of \$60 billion by 2030, with tribometers (bearing sensors) alone providing a short term market of \$7 million by 2030. The following diagram shows the scope of the PoC:
+\begin{figure}[!h]
     \centering
-    \begin{tabular}{|l|p{8cm}|}
-    \hline
-    \textbf{Stakeholder Group} & \textbf{Anticipated Impact} \\
-    \hline
-    Machinery Operators & Reduced maintenance costs, improved asset utilisation, enhanced safety performance. \\
-    \hline
-    Maintenance Workers & Potential job evolution from reactive repairs to predictive monitoring roles; need for upskilling. \\
-    \hline
-    End-users & Improved safety and service reliability through fewer unexpected failures. \\
-    \hline
-    Manufacturing Industries & Extended equipment life, reduced unplanned downtime, cost savings. \\
-    \hline
-    Bearing Manufacturers & Potential market shift from replacement sales to remanufacturing and monitoring services. \\
-    \hline
-    Regulatory Bodies & Nxew standards and compliance frameworks may be needed. \\
-    \hline
-    \end{tabular}
-    \caption{Stakeholder Impacts}
-    \label{tab:stakeholder-impacts}
-    \end{table}
-    In terms of indirect impact, maintenance workers will benefit, because replacing bearings on heavy machinery can be dangerous and dirty. On the other hand, the amount of maintenance work will fall. Engineering jobs within firms that incorporate the technology will need to adapt to an increase in sophistication, with additional training needed to interpret the data coming from sensor monitoring equipment. The project founders predict that the project and commercialisation will generate over 20 skilled jobs within 3 years, and contribute to the growth in the UK's clean-tech sector, and this could be a huge underestimate if adoption is successful. There are many opportunities to grow; the world's largest bearing manufacturer, SKF, employs around 40,000 people globally.
-    However, there groups whose interests or values might conflict: Since the overall goal is the improvement of utilisation and a reduction in overall manufacturing output and preemptive waste, the project is not in the interest of bearing manufacturers who rely solely on volume. Of course, the proposed bearings are more sophisticated, and the opportunity exists to achieve greater added value, but this will ask manufacturers-under-license to be forward-looking.
-    Considering accountability, the research project is managed by the Faculty of Engineering in the University of Southampton, and while activty sits under the umbrella of the university, the leadership of the faculty is accountable. After spinout and commercialisation, the CEO of the spinout will be accountable. For operating companies adopting the product, accountability ultimately will fall with the CEOs of those organisation.
+    \includegraphics[width=0.75\linewidth]{product-schematic.png}
+    \caption{Product schematic depicting scope of PoC}
+    \label{fig:1}
+\end{figure}
+\subsection{Technology readiness}
+    The project considers itself to be at Technology Readiness Level 6, \enquote{demonstrator} level. Several key hurdles exist: The industries targeted are highly regulated in many cases, so safety concerns take the highest priority. And for a move away from polluting oil-based lubricants to plant-based ones, it is hard to overcome the natural conservatism that machinery operators demonstrate from their years of experience with conventional lubricants.
+\subsection{Potential of misuse}
+    The applications of the technology are extremely wide-ranging and can be applied to most industries. Examples provided by the project include wind turbines, trains, trucks, aircraft, gas turbines and all power generation plant. In all of these cases, inspection requires disassembly and is dangerous and costly. Given the wide range of applicability, consideration must be given to military application. But the technology is not aimed at the military sector per se., and in any case, classifying military use as \emph{misuse} is a matter of perspective.
 
-\subsection{Inclusion}
-    The project team has focused on the inclusion of experts, with each member bringing signicant prior experience in their area, whether that be leadership and vision, hardware, ML algorithms, or product management. The project is inclusive in the sense that it understands the stakeholders involved (research scientists, industry bodies, partners and customers) and has engaged with them ahead of funding and product development.
-    The team is diverse in terms of age, experience, skill-set and gender. The focus, though, is on expertise and ability rather than an externally defined spectrum, such as race or social background.
-    The project team is currently small (6 founding team members), with a Partner network, a UoS support team, and an advisory board of industrial advisors, bearing and data experts. It is relatively easy to ensure such a small team remains cohesive and that communication lines (in both directions) are kept short. Of course, inclusion of all members in a relatively small team relies on effective communication both up and down, and the ability of the leadership of the project and subsequent spinout to listen.
-
-\subsection{Engagement}
-    Considering whether any groups of stakeholders have been overlooked or underrepresented, the experienced team understands the importance of stakeholder inclusion. Stakeholders are managed by the executive project team, with oversight provided by the board. Over the last year, the founders have engaged with commercial stakeholders to verify industrial needs in condition monitoring. As part of an Innovate UK ICURe Explore program, the founders have conducted targeted market research, including requirements and use-case gathering. To support continuous improvement of the MVP, the project team will engage with partners in solution testing, joint discussions, and iterative feedback. The team will also build an expert community through partners where insight and lessons can be shared. In addition, the team will undertake direct outreach, including site visits, trade show participation, partner introduction and online webinars. This outreach activity is ongoing, with an open online survey, which allows potential customers to verify requirements. This helps shape the product roadmap, define the development plan and shape the minimum viable product (MVP).
-
-\subsection{Upskilling and training}
-    Additional training will be required in the organisations which deploy this technology. Although the product will produce human-understandable insights and actions for preemptive maintainance alongside raw data, there will still be a new set of operational and analytical skills required from machinery maintenance workers. The project should consider skills transfer to customers. The product will require clear and effective documentation, probably web-based and available in multiple languages. The spinout may consider some additional consultancy services to transfer knowledge into the customers' teams, but this cannot be at the expense of a lack of focus on continued product development.
+    The technology doesn't directly facilitate illegal behaviour.
+\subsection{Consequences of failure}
+    If the project fails to deliver a working PoC (i.e.\ the bearings, their sensors, and the peripheral ML-based analysis tools), the negative consequences are limited; financial (to the extent that funding doesn't deliver a return) and possibly reputational (to the extent that e.g.\ exaggerated claims were not met). 
     
-    Within the current project team, there is a good blend of managerial and technical skill and experience, and no perceived gaps. The team is very lean; every member has a defined area of responsibility. The structure and titles of team members in the organisation indicates a recognition of expertise in specific domains. That said, the founding team are all primarily technologists, with additional commercial expertise in the advisory board and the UoS support team (business development advisor, etc.). This is surely an area that the team will want to strengthen internally as the PoC is concluded and before commercialisation is expanded.
+    However, once the bearings are deployed into production, the negative consequences are much greater: If the sensors produce a false positive, then machinery will be taken out of service and components replaced unnecessarily. If they produce a false negative, and don't detect an imminent failure, then life-threatening accidents might occur. 
+    
+    The act of all engineering is to balance risk, safety margin and cost; this technology allows operators to understand failure boundaries better, and to safely reduce uncertainty and cost.
+\subsection{Knowledge sharing}
+    A key decision for the project will be the extent to which to share research results and learnings which might be transferable to other fields. 
+    
+    The team has experience of publishing papers and software openly, for example in the form of software libraries on Github (e.g.\ github.com/jogrundy), and has published 800 research papers collectively. It has a track record of organising conferences and symposia, chairing industry bodies, and outreach and teaching activities.
+    
+    The team has already published less sensitive results, but recognises that the core innovation, electrostatic sensing for early stage wear detection, is a novel approach that can be protected through patents. 
+\subsection{Intellectual property} 
+    Patent searches have not identified specific prior art. The team has presented to the university IP panel, and will seek to protect disclosure of the AM/ML algorithms and the weights etc.\ evaluated. Following patent attorney advice, the team will decide on whether simply to retain trade secrets or disclose through the protection of a patent application. Electrostatic sensors themselves are not novel; the team published a paper describing the application in bearing wear detection in 2021. 
+    
+    Given this position, the team is limiting wider communication. Conference and journal publications are being held back, and partner discussions are held under NDA to limit disclosure. 
 
+    Other aspects of IP are also being developed, such as protection by copyright of the software solution and printed sensor design. The objective is to allow the university to license the IP portfolio to TriboAI Ltd., which will apply for trademark protection across related classes of goods and services. It is the intention that the IP will represent a significant company asset.
+
+    The spin-out team will also maintain an IP register and follow a formal process of IP due diligence, looking at identification, ownership and barriers for IP components (some of which will be held by other parties).
+
+    This stance on IP protection through non-disclosure is standard within the commercial startup world. Patents and trade secrets can increase financial returns from research, encouraging firms to invest in new green and socially beneficial technologies, such as this. However, overly broad patents can block following research, and restrict the open exploration that RRI encourages. And if IP protection is sought solely to maximise profit, it will conflict with responsible goals of equitable access and long term societal benefit. The team should weigh the needs for protection against long-term sustainability, and consider a tiered licensing model (with robust protection) where certain social-benefit sectors can gain access.
+\subsection{Product alternatives}
+    Alternative approaches of preventative failure detection exist, but they are disruptive (i.e.\ detection requires the machinery to be suspended from service), involved (i.e.\ they require disassembly for inspection) and potentially are destructive in nature (e.g.\ a sample of bearings are sliced open to inspect sliding surfaces). 
+
+    The other alternative is the status quo, but as discussed elsewhere, this involves unsustainable practice of the conservative early retirement of bearings, and creates waste.
+\section{People}
+    The project is led by Professor Robert Wood and Professor Nick Harris, with a founding team from the University of Southampton. Support is also resourced from the university, both in terms of tribological laboratory facilities as well as business support. The technology transfer officer is Graham Cradock, who has been supporting spin-outs from the university for 3 years and has many prior years of CEO experience at startups.
+
+    Each member of the project team has extensive delivery experience. For example, Professor Wood has 30 years experience on developing electrostatic sensors, and has been awarded medals in the tribology domain, as well as funding to create the UK national centre for tribology. Other members of the founding team have 25+ years experience in tribology, and have experience spinning out cutting-edge technology into startups such as Perpetuum, which grew to 75 people and was sold to Hitachi. 
+\subsection{Impact on people}
+    If the research is successful, and the spin-out achieves commercial traction and adoption, machine operators should see shorter and fewer machinery maintenance windows, while service end-users should see higher service availability and overall lower costs.
+    \begin{itemize}
+    \item \textbf{Machinery Operators}
+    \begin{itemize}
+        \item Reduced maintenance costs, as the amount of maintenance work will fall.
+        \item Improved asset utilisation, safety performance.
+        \item Extended equipment life.
+        \item Reduced unplanned downtime.
+        \item Longer-term cost savings.
+        \item Engineering jobs will need to adapt to an increase in sophistication.
+    \end{itemize}
+    \item \textbf{Maintenance Workers}
+    \begin{itemize}
+        \item Replacing bearings on heavy machinery can be dangerous and dirty, so job quality improves.
+        \item Job evolves from reactive repair work to predictive monitoring.
+        \item Upskilling, with additional training needed to interpret sensor monitoring data.
+    \end{itemize}
+    \item \textbf{End-users}
+    \begin{itemize}
+        \item Improved safety.
+        \item Increased service reliability through fewer unexpected failures.
+    \end{itemize}
+    \item \textbf{Bearing Manufacturers}
+    \begin{itemize}
+        \item Potential market shift from replacement sales to re-manufacturing services.
+        \item Growth in monitoring and digital service offerings.
+        \item Loss of market for bearing manufacturers who rely solely on volume.
+        \item Proposed bearings are more sophisticated, and greater added value.
+        \item Manufacturers-under-license need to be forward-looking.
+    \end{itemize}
+    \item \textbf{Regulatory Bodies}
+    \begin{itemize}
+        \item Need for new industrial standards.
+        \item Development of updated compliance frameworks.
+    \end{itemize}
+    \end{itemize}
+    The project founders predict that the project and commercialisation will generate over 20 skilled jobs within 3 years, and contribute to the growth in the UK's clean-tech sector. This could be a huge underestimate if adoption is successful. There are many opportunities to grow; the world's largest bearing manufacturer, SKF, employs around 40,000 people globally.
+\subsection{Accountability}
+    The research project is managed by the Faculty of Engineering in the University of Southampton, and as long as activity sits under the university's umbrella, the faculty leadership is accountable. After spin-out, the CEO of the spin-out will become accountable to shareholders and wider society. For operating companies adopting the product, accountability ultimately will fall to the CEOs of those organisation.
+\subsection{Inclusion}
+    The project team has focused on the inclusion of experts, with each member bringing significant prior experience in their area, whether that is organisational and commercial leadership, hardware technology, ML algorithms, or product management. The project is inclusive in the sense that it understands the stakeholders involved (research scientists, industry bodies, partners and customers) and has engaged with them ahead of funding and product development.
+\subsection{Diversity}
+    The team is diverse in terms of age, experience, skill-set and gender. The focus, though, is on expertise and ability rather than externally defined spectra such as race or social background.
+    The project team is currently small (6 founding team members), with a partner network, a university support team, and an advisory board of industrial advisors, bearing and data experts. It is relatively easy to ensure such a small team remains cohesive and inclusive. Of course, inclusion of all members in a relatively small team relies on effective and open communication, and on the ability of the leadership of the project and subsequent spin-out to listen.
+\subsection{Upskilling and training}
+    Additional training will be required in the organisations which deploy this technology. Although the product will produce human-understandable insights and actions for pre-emptive maintenance alongside raw data, there will still be a new set of operational and analytical skills required from machinery maintenance workers. The project should consider skills transfer to customers. The product will require clear and effective documentation, probably web-based and available in multiple languages. The spin-out may consider some additional consultancy services to transfer knowledge into the customers' teams, but this cannot be at the expense of a lack of focus on continued product development.
+    
+    Within the current project team, there is a good blend of managerial and technical skill and experience, and no perceived gaps. The team is very lean; every member has a defined area of responsibility. The structure and titles of team members in the organisation indicates a recognition of expertise in specific domains. That said, the founding team are all primarily technologists, supported by external commercial expertise from the advisory board and the university support team (business development advisor, etc.). The spin-out will want to strengthen internal commercial expertise  to support sales expansion.
+\section{Processes}
+\subsection{Governance}
+    The project has an experienced advisory board. The board consists of a data scientist, an industry adviser and a bearing expert. Given this expertise, it's expected that the board would focus primarily on technical matters and direction, rather than commercial, leadership or team issues.
+
+    In terms of technology development, the project promotes non-destructive sensing methods that are well established. The international standards which map closest to the project are the ISO standards for machinery vibration, such as ISO 10816 and its current replacement ISO/DIS 20816-3 \cite{for_2025}. The research methodology should incorporate laboratory testing, with controlled experiments to validate sensor accuracy and algorithm performance across bearing types and operating conditions. This should be followed by field trials, real-world deployment on operating machinery to assess performance under variable environmental conditions. 
+\subsection{Engagement and stakeholder representation}
+    The experienced team understands the importance of stakeholder inclusion. Stakeholders are managed by the executive project team, with oversight provided by the board. Over the last year, the founders have engaged with commercial stakeholders to verify industrial needs in condition monitoring. As part of an Innovate UK ICURe Explore program, the founders have conducted targeted market research, including requirements and use-case gathering. To support continuous improvement of the Minimum Viable Product (MVP), the project team will engage with partners in solution testing, joint discussions, and iterative feedback. The team will also build an expert community through partners where insight and lessons can be shared. In addition, the team will undertake direct outreach, including site visits, trade show participation, partner introduction and online webinars. This outreach activity is ongoing, with an open online survey, which allows potential customers to verify requirements. This helps shape the product roadmap, define the development plan and shape the MVP.
+\subsection{Data}
+    Data associated with the project will be handled under an overall Data Management Plan ensuring that all data are FAIR (Findable, Accessible, Interoperable, Reusable). Specifically for tribological data, the project will adopt commonly agreed standards for the generation of data and metadata \cite{garabedian_2022}. Data should be stored in open, non-proprietary formats (like CSV) so it can be easily found, reused, and combined with other data. All data management must follow GDPR and UK regulation. Commercial partners' data must be kept private while still providing enough access to meet the project's analytical requirements.
+    
+    Statistical data, such as the number of failed bearings or catastrophic failures, should also be recorded, as this may assist in product safety/recall situations. The amount of time that machinery spends 'in maintenance' where bearings are being replaced should also be measured.
+\subsection{Risks and Risk Management}
+    The proposed product has several risks, including long-term sensor reliability in harsh operating environments, algorithm performance across diverse bearing types and operating conditions, and market acceptance and regulatory approval timelines. A non-exhaustive list of risks includes:
+    \begin{itemize}
+        \item \textbf{Risk:} Technical - e.g.\ vibrations detected by sensors cannot be correlated to the level of wear and bearing life remaining, or sensor calibration drift, environmental interference, and data transmission failures could lead to unreliable predictions.
+        \begin{itemize}
+            \item \textbf{Effect:} Failure to gain credibility with manufacturers and operators.
+            \item \textbf{Mitigation:} Prior technology research, prior experience in overcoming go-to-market scale-up issues.
+        \end{itemize}
+        \item \textbf{Risk:} Security - e.g.\ connected monitoring systems can introduce new cybersecurity vulnerabilities.
+        \begin{itemize}
+            \item \textbf{Effect:} Service disruption as cyber vulnerabilities exploited.
+            \item \textbf{Mitigation:} Ongoing cyber penetration testing.
+        \end{itemize}
+        \item \textbf{Risk:} Governance controls fail; research and spin-out activity is conducted inappropriately.
+        \begin{itemize}
+            \item \textbf{Effect:} Inappropriate results generated, ineffective work undertaken.
+            \item \textbf{Mitigation:} Oversight from external board, possibly additional focus committees as scale dictates.
+        \end{itemize}
+        \item \textbf{Risk:} Commercial - e.g.\ that funding for product development cannot be found, or that the cost of product development and manufacture is so high that it's cheaper to replace bearings early and discard usable items, or dependence on proprietary monitoring systems may create vendor lock-in for operators.
+        \begin{itemize}
+            \item \textbf{Effect:} Lack of product development and sales.
+            \item \textbf{Mitigation:} Commercial partnerships and ongoing validation of commercial feasibility.
+            \item \textbf{Mitigation:} 3 partners, increasing the likelihood of successful integration with at least one, but also explore other systems with new partners.
+        \end{itemize}
+        \item \textbf{Risk:} Lack of engagement from prospective customers or markets.
+        \begin{itemize}
+            \item \textbf{Effect:} Validation issues of commercial use cases or attracting investment.
+            \item \textbf{Mitigation:} Ongoing customer discovery during ICURe Explore and Future Worlds programmes, and development of an online presence. Contacts with 100+ partners at nCATS and 50 during ICURe Explore.
+        \end{itemize}
+        \item \textbf{Risk:} Business opportunity remains at the test level.
+        \begin{itemize}
+            \item \textbf{Effect:} Difficulty in expanding the business and scale up.
+            \item \textbf{Mitigation:} Identified a beachhead market but can move to tribology services and provide connections to larger industry players.
+        \end{itemize}
+        \item \textbf{Risk:} Reputational - e.g.\ that the bearing analysis works in a laboratory environment but fails in operational use, causing inconvenience or death to end-users and negative public perception. These reputational risks could impact machine operating organisations, the spin-out, and the university itself. 
+        \begin{itemize}
+            \item \textbf{Effect:} Damage to commercial activities, negative public perception, expensive litigation.
+            \item \textbf{Mitigation:} Honesty with customers. Effective governance and oversight. Sufficient testing before commercial at-scale deployment
+        \end{itemize} 
+    \end{itemize}
+    Risks can be monitored through the establishment of a risk management process. This ensures that risks are logged in a register and periodically and methodically reassessed. All high-likelihood or high-severity risks should be raised to the advisory board. This is a standard commercial project management process, often part of RAIDs analysis (tracking of Risks, Assumptions, Issues and Dependencies). Further formalisation could be effected through the establishment of a risk committee within the spin-out, and communication of top risks to the university risk process. 
+    
+    Risks are in part mitigated by the tremendous experience of the team behind the research and spin-out, but additional specific risk analysis and management may be required.
+\subsection{Reflection and introspection}
+    Reflection is crucial to ensure that blind spots and weaknesses are recognised, so that they may be ameliorated. It's natural for spin-outs and startups to focus hard on what their participants are most excited about, missing the bigger picture of implications and wider environmental issues with ultimately cause them to fail. The project team understands the context in which it operates; through an extensive network of technologists and potential customers, it understands the status quo, the potential to improve bearing monitoring, and the economic benefits of doing so. Reflection is not being monitored as an activity per se, but the founding team has the experience to know that reflection (whether formalised, externalised or internalised) is important. 
+    
+    Additionally, the advisory board should hold a mirror up to the founding team, and challenge team members to continually assess progress, whether original objectives remain valid, whether funding remains sufficient, and whether commercialisation (the ground truth for a spin-out) is on track. As a commercial transition begins, it may be beneficial to add non-executive directors with legal, marketing, or finance experience. 
+
+    The project should ensure that management time is set aside to reflect as a group, for example, on a monthly or annual basis.        
+\subsection{Engagement}
+    The team's objective is to engage with machine manufacturers, parts suppliers, research institutions and users, and reflects the team's experience in working inclusively with industrial partners and researchers. Customer feedback is seen as critical for impact and market entry and stakeholders already have substantial involvement in the project. External organisations, such as Catapult (the national renewable energy centre), Cummins (a renowned diesel engine manufacture), Schaeffler (a car parts supplier with 80,000 employees), and City University have provided written support for funding applications. These industry and academic partners can provide commercial and technical feedback.
+\subsection{Conduct}
+    The founding team commits to ethical conduct, open and trusted research, and to working with colleagues without prejudice or bias using inclusive approaches to product design and activities. Team members are focused on effective commercialisation as well as research, so there is a commercial imperative for continued improvement, and the motivation of the team members is strongly aligned with this. As senior members of the university faculty, the founding team already understands the obligation for ethical and unbiased research.
 \section{Disclosures}
-    Professor Harris provided links to a number of published papers, as well as an unpublished application for project funding to UKRI, which was helpful in providing certain structural and procedural insights. Perplexity.ai was used for elements in writing this report: 1) The generation of Latex tables. 2) The conversion of the Orbit RRI framework flashcards to markdown, used as a report framework. 3) To provide ideas for certain general questions, e.g.\ "how does ip protection intersect with responsible innovation", where the author's knowledge was insufficient.
+    Professor Harris helpfully provided an interview and links to a number of published papers, as well as an unpublished application for project funding to UKRI. Perplexity.ai was used for elements in writing this report: 1) The generation of Latex tables. 2) The conversion of the Orbit RRI framework flashcards to markdown, used as a question framework. 3) To provide ideas for certain general questions, e.g.\ "how does IP protection intersect with responsible innovation", where the author's knowledge was insufficient.
 % ---- Bibliography ----
 \bibliographystyle{splncs04}
 \bibliography{main}
